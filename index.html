@@ -1,77 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sliding Slider</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-    </head>
-    <body class="bg-gray-100 ">
-
-        <div class="max-w-screen-2xl min-h-screen w-full mx-auto">
-            <nav class="flex items-center justify-between px-4 py-6">
-                <!-- Logo / Brand -->
-                <h1 class="text-2xl font-bold text-gray-800">BrandName</h1>
-
-                <!-- Navigation Links -->
-                <div class="hidden md:flex text-lg space-x-8">
-                    <a href="#"
-                        class="text-gray-600 hover:text-blue-600">Home</a>
-                    <a href="#"
-                        class="text-blue-600 border-b-2 border-blue-600 hover:text-blue-800">Brands</a>
-                    <a href="#"
-                        class="text-gray-600 hover:text-blue-600">Collection</a>
-                    <a href="#"
-                        class="text-gray-600 hover:text-blue-600">About</a>
-                    <a href="#"
-                        class="text-gray-600 hover:text-blue-600">Contact</a>
-                </div>
-
-                <!-- Sign Up Button -->
-                <button
-                    class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-md">Sign
-                    Up</button>
-            </nav>
-
-            <!-- Main Hero Section -->
-            <div class="max-w-screen-xl mx-auto  flex items-center gap-10 py-20 px-10 mt-10 rounded-md  bg-violet-500">
-                <!-- Product Text Section -->
-                <div class="w-4/2 flex flex-col justify-center">
-                    <h2 class="text-4xl md:text-6xl font-bold">Air Jordan 6
-                        Retro SP</h2>
-                    <p class="text-lg text-gray-400 mt-4">
-                        Originally released the year MJ won his first
-                        professional championship. The Air Jordan 6 Retro SP
-                        features a sculpted midsole for cushioned stability,
-                        with overlays designed to abstractly depict the number
-                        23.
-                    </p>
-                    <div class="mt-6">
-                        <span class="text-2xl font-bold">$225</span>
-                    </div>
-
-                    <!-- Buttons -->
-                    <div class="mt-6 flex space-x-4">
-                        <a href="#"
-                            class="bg-red-500 px-6 py-3 rounded-md text-white hover:bg-red-600">Add
-                            to Cart</a>
-                        <a href="#"
-                            class="bg-gray-700 px-6 py-3 rounded-md text-white hover:bg-gray-800">Watch
-                            Trailer</a>
-                    </div>
-                </div>
-
-                <!-- Product Image Section -->
-                <div class="w-3/2 flex ">
-                    <div class="px-5 h-96 w-96 ">
-                        <img
-                            src="https://i.pinimg.com/236x/5c/f6/18/5cf6180733a55545edbb461cf5272058.jpg"
-                            alt="Product" class="object-cover h-full w-full">
-                    </div>
-                </div>
-            </div>
-
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Advertisement Design with Navbar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body class="bg-gray-100">
+  
+  <!-- Navbar -->
+  <nav class="bg-white shadow-lg fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between h-16">
+        <!-- Logo/Brand Name -->
+        <div class="flex items-center">
+          <h1 class="text-3xl font-bold text-indigo-900">HIBEXA</h1>
         </div>
 
-    </body>
+        <!-- Links for large screens -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-gray-700 hover:text-indigo-600 font-medium">Home</a>
+          <a href="#" class="text-gray-700 hover:text-indigo-600 font-medium">Products</a>
+          <a href="#" class="text-gray-700 hover:text-indigo-600 font-medium">About</a>
+          <a href="#" class="text-gray-700 hover:text-indigo-600 font-medium">Contact</a>
+        </div>
+
+        <!-- Hamburger Menu for small screens -->
+        <div class="md:hidden flex items-center">
+            <i class="ri-menu-line text-2xl"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden">
+      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Home</a>
+      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Products</a>
+      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">About</a>
+      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Advertisement Section -->
+  <div class="flex items-center justify-center h-screen pt-16">
+    <div class="p-4 rounded-lg shadow-lg max-w-screen-2xl h-[80vh] mx-auto flex flex-col md:flex-row bg-yellow-400">
+
+      <!-- Left Side (Image) -->
+      <div class="relative w-full md:w-1/2">
+        <img src="https://i.pinimg.com/564x/e7/a9/81/e7a9812be6c7d2fcbb46c88224dc41b5.jpg" alt="T-shirt" class="object-cover object-center rounded-lg w-full h-full">
+        
+        <!-- Discount Badge -->
+        <div class="absolute top-4 left-0 bg-red-700 text-white text-sm px-3 py-1 rounded-full line-through">
+          ₹899/-
+        </div>
+
+        <!-- Offer Price -->
+        <div class="absolute top-14 left-0 bg-red-700 text-white text-lg px-4 py-2 rounded-full font-bold">
+          ₹499/- <span class="text-xs">ONLY</span>
+        </div>
+      </div>
+
+      <!-- Right Side (Text) -->
+      <div class="w-full md:w-1/2 mt-4 md:mt-0 md:pl-4 flex flex-col justify-between">
+        <!-- Brand and Title -->
+        <div>
+          <h1 class="text-3xl md:text-4xl font-bold text-indigo-900 mt-5">HIBEXA</h1>
+          <h2 class="text-4xl md:text-6xl font-extrabold md:text-white text-yellow-500 mt-3 leading-tight">
+            Upgrade <span class="text-gray-900">Your</span> <br>
+            Style With <span class="text-gray-900 mt-5">HIBEXA!</span>
+          </h2>
+          <p class="text-md md:text-lg text-gray-600 mt-2">
+            We use 100% Premium quality cotton biowashed fabric for T-Shirts.
+          </p>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="mt-4">
+          <p class="text-gray-900 font-bold text-md md:text-lg">For More Information Contact Us:</p>
+          <p class="text-indigo-900 font-bold text-lg md:text-xl">+91 8591912644</p>
+        </div>
+
+        <!-- Shop Now Button -->
+        <div class="flex flex-col md:flex-row gap-4">
+          <a href="#" class="bg-red-700 text-white text-md md:text-lg font-bold py-2 px-8 rounded-full text-center mt-4">
+            SHOP NOW!
+          </a>
+          <a href="#" class="bg-red-700 text-white text-md md:text-lg font-bold py-2 px-4 rounded-full text-center mt-4">
+            EXPLORE MORE!
+          </a>
+        </div>
+
+        <!-- Social and Email -->
+        <div class="flex flex-col md:flex-row items-center justify-between mt-4">
+          <!-- Social Media Icons -->
+          <div class="space-x-2">
+            <a href="#" class="text-indigo-700"><i class="ri-facebook-fill text-2xl"></i></a>
+            <a href="#" class="text-blue-400"><i class="ri-twitter-fill text-2xl"></i></a>
+            <a href="#" class="text-blue-800"><i class="ri-linkedin-fill text-2xl"></i></a>
+            <a href="#" class="text-pink-500"><i class="ri-pinterest-fill text-2xl"></i></a>
+          </div>
+          
+          <!-- Email -->
+          <p class="text-sm text-gray-600 mt-2 md:mt-0">info.hibexa@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
 </html>
